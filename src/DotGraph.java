@@ -69,7 +69,7 @@ public class DotGraph {
             output.append(source).append(" -> ").append(dest).append("; ");
             edgeCount++;
         }
-        System.out.println("Total edge count: " + edgeCount + "\n");
+        System.out.println("Total edge count: " + edgeCount);
         return output.toString();
     }
 

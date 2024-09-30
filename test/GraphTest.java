@@ -14,14 +14,14 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class GraphTest {
-    String filename;
+    String file;
     String filepath;
     DefaultDirectedGraph<String, DefaultEdge> directedGraph;
 
     @Before
     public void setup() throws IOException {
-        filename = "graphfile.dot";
-        filepath = getClass().getResource(filename).getPath();
+        file = "graphfile.dot";
+        filepath = getClass().getResource(file).getPath();
         DotGraph.parseGraph(filepath);
     }
 
