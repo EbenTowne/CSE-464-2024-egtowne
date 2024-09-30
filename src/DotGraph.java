@@ -1,0 +1,109 @@
+import org.jgrapht.graph.DefaultDirectedGraph;
+import org.jgrapht.graph.DefaultEdge;
+
+import java.io.*;
+import java.util.Vector;
+
+public class DotGraph {
+    static DefaultDirectedGraph<String, DefaultEdge> graph;
+    static Vector<String> nodes;
+
+    public static DefaultDirectedGraph<String, DefaultEdge> parseGraph(String filename) throws IOException {
+        graph = new DefaultDirectedGraph<>(DefaultEdge.class);
+        nodes = new Vector<>();
+        BufferedReader reader = new BufferedReader(new FileReader(filename));
+        String line;
+
+        while ((line = reader.readLine()) != null) {
+            line = line.trim();
+            // Check for node labels by identifying "node;" format
+            if (line.contains("->")) {
+                // Parse edges in the format "a -> b;"
+                String[] parts = line.replace(";", "").split("->");
+                if (parts.length == 2) {
+                    String src = parts[0].trim();
+                    String dst = parts[1].trim();
+                    //System.out.println(src + " -> " + dst);
+                    if(!nodes.contains(src)){
+                        nodes.add(src);
+                        graph.addVertex(src);
+                    }
+                    if(!nodes.contains(dst)){
+                        nodes.add(dst);
+                        graph.addVertex(dst);
+                    }
+                    graph.addEdge(src, dst);
+                }
+            }
+            else if (line.endsWith(";")) {
+                // Parse standalone nodes
+                String node = line.replace(";", "").trim();
+                if(!nodes.contains(node)) {
+                    nodes.add(node);
+                    graph.addVertex(node);
+                    //System.out.println(node);
+                }
+            }
+        }
+        System.out.println("Dot Parsing Finished\n");
+        reader.close();
+        return graph;
+    }
+
+    public static String graphtoString(){
+        int nodeCount = 0;
+        int edgeCount = 0;
+        System.out.println("Node List: ");
+        for (String node : nodes) {
+            System.out.println(node);
+            nodeCount++;
+        }
+        System.out.println("Total node count: " + nodeCount + "\n");
+        System.out.println("Edge List: ");
+        for (DefaultEdge edge : graph.edgeSet()) {
+            String source = graph.getEdgeSource(edge);
+            String dest = graph.getEdgeTarget(edge);
+            System.out.println(source + " -> " + dest);
+            edgeCount++;
+        }
+        System.out.println("Total edge count: " + edgeCount + "\n");
+        return null;
+    }
+
+    public static void outputGraph() throws IOException {
+        String filepath = "outputGraph.dot";
+        String source;
+        String dest;
+        try (FileWriter fileWriter = new FileWriter(filepath)) {
+            fileWriter.write("digraph G {\n");
+            for (String node : nodes) {
+                fileWriter.write("    " + node + ";\n");
+            }
+            for (DefaultEdge edge : graph.edgeSet()) {
+                source = graph.getEdgeSource(edge);
+                dest = graph.getEdgeTarget(edge);
+                fileWriter.write("    " + source + " -> " + dest + ";\n");
+            }
+            fileWriter.write("}\n");
+        }
+        System.out.println("Graph successfully outputted to " + filepath);
+    }
+
+    public static int getNodes(){
+        int count = 0;
+        for (String node : nodes) {
+            count++;
+        }
+        return count;
+    }
+
+    public static int getEdges(){
+        int count = 0;
+        for (DefaultEdge edge : graph.edgeSet()) {
+            count++;
+        }
+        return count;
+    }
+}
+
+
