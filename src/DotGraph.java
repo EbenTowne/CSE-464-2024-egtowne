@@ -45,7 +45,6 @@ public class DotGraph {
                 }
             }
         }
-        System.out.println("Dot Parsing Finished\n");
         reader.close();
         return graph;
     }
@@ -53,21 +52,25 @@ public class DotGraph {
     public static String graphtoString(){
         int nodeCount = 0;
         int edgeCount = 0;
+        StringBuilder output = new StringBuilder();
+
         System.out.println("Node List: ");
         for (String node : nodes) {
             System.out.println(node);
+            output.append(node).append("; ");
             nodeCount++;
         }
-        System.out.println("Total node count: " + nodeCount + "\n");
+        System.out.println("Total node count: " + nodeCount);
         System.out.println("Edge List: ");
         for (DefaultEdge edge : graph.edgeSet()) {
             String source = graph.getEdgeSource(edge);
             String dest = graph.getEdgeTarget(edge);
             System.out.println(source + " -> " + dest);
+            output.append(source).append(" -> ").append(dest).append("; ");
             edgeCount++;
         }
         System.out.println("Total edge count: " + edgeCount + "\n");
-        return null;
+        return output.toString();
     }
 
     public static void outputGraph() throws IOException {
@@ -86,7 +89,6 @@ public class DotGraph {
             }
             fileWriter.write("}\n");
         }
-        System.out.println("Graph successfully outputted to " + filepath);
     }
 
     public static int getNodes(){
