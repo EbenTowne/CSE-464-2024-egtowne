@@ -112,7 +112,7 @@ public class DotGraph {
 
     public static int addEdge(String src, String dst){
         if(graph.containsEdge(src, dst)){
-            return -1;
+            return 1;
         }
         if(!containsNode(src)){
             addNode(src);

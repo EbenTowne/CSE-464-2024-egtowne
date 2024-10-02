@@ -60,9 +60,9 @@ public class GraphTest {
     @Test
     public void addNodeTest(){
         //Add single node
-        String label = "w";
+        String label = "v";
         DotGraph.addNode(label);
-        assertTrue("Node 'w' was not added.", DotGraph.containsNode("w"));
+        assertTrue("Node 'v' was not added.", DotGraph.containsNode("v"));
 
         //Add multiple nodes at the same time
         String[] labels = {"x", "y", "z"};
