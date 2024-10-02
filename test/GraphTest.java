@@ -77,7 +77,7 @@ public class GraphTest {
         assertTrue("Node 'x' was added when it is a duplicate", labelExists = true);
     }
 
-    /*@Test
+    @Test
     public void addEdgeTest(){
         //Add edge with existing nodes
         String src = "b";
@@ -90,6 +90,6 @@ public class GraphTest {
         dst = "g";
         edgeAdded = DotGraph.addEdge(src, dst);
         assertTrue("Edge added was not added.", edgeAdded == 0);
-    }*/
+    }
 }
 
