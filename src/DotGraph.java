@@ -73,8 +73,7 @@ public class DotGraph {
         return output.toString();
     }
 
-    public static void outputGraph() throws IOException {
-        String filepath = "outputGraph.dot";
+    public static void outputGraph(String filepath) throws IOException {
         String source;
         String dest;
         try (FileWriter fileWriter = new FileWriter(filepath)) {
@@ -91,6 +90,26 @@ public class DotGraph {
         }
     }
 
+    public static boolean addNode(String label){
+        if (!graph.containsVertex(label)) {
+            graph.addVertex(label);
+            nodes.add(label);
+        } else {
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean addNodes(String[] labels) {
+        for(String label : labels){
+            boolean x = addNode(label);
+            if(x == false){
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static int getNodes(){
         int count = 0;
         for (String node : nodes) {
@@ -105,6 +124,15 @@ public class DotGraph {
             count++;
         }
         return count;
+    }
+
+    public static boolean containsNode(String label) {
+        for (String node : nodes) {
+            if(node == label){
+                return true;
+            }
+        }
+        return false;
     }
 }
 

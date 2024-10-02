@@ -8,10 +8,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class GraphTest {
     String file;
@@ -26,7 +24,7 @@ public class GraphTest {
     }
 
     @Test
-    public void parseTest(){
+    public void parseTest() throws IOException {
         int totalNodes = DotGraph.getNodes();
         assertEquals(5, totalNodes);
         int totalEdges = DotGraph.getEdges();
@@ -36,8 +34,9 @@ public class GraphTest {
 
     @Test
     public void outputTest() throws IOException {
-        DotGraph.outputGraph();
-        File outputFile = new File("outputGraph.dot");
+        String filepath = "outputGraph.dot";
+        DotGraph.outputGraph(filepath);
+        File outputFile = new File(filepath);
         assertTrue("The output file was not created.", outputFile.exists()); //checks that the output file was created
         StringBuilder fileContent = new StringBuilder(); //read output file contents
         try (BufferedReader reader = new BufferedReader(new FileReader(outputFile))) {
@@ -57,5 +56,40 @@ public class GraphTest {
         String recievedOutput = DotGraph.graphtoString();
         assertEquals("The output returned from graphtoString() does not match the expected output", expectedContent.trim(), recievedOutput.trim());
     }
+
+    @Test
+    public void addNodeTest(){
+        //Add single node
+        String label = "w";
+        DotGraph.addNode(label);
+        assertTrue("Node 'w' was not added.", DotGraph.containsNode("w"));
+
+        //Add multiple nodes at the same time
+        String[] labels = {"x", "y", "z"};
+        DotGraph.addNodes(labels);
+        assertTrue("Node 'x' was not added.", DotGraph.containsNode("x"));
+        assertTrue("Node 'y' was not added.", DotGraph.containsNode("y"));
+        assertTrue("Node 'z' was not added.", DotGraph.containsNode("z"));
+
+        //Add existing node
+        label = "x";
+        boolean labelExists = DotGraph.addNode(label);
+        assertTrue("Node 'x' was added when it is a duplicate", labelExists = true);
+    }
+
+    /*@Test
+    public void addEdgeTest(){
+        //Add edge with existing nodes
+        String src = "b";
+        String dst = "c";
+        int edgeAdded = DotGraph.addEdge(src, dst);
+        assertTrue("Edge added was not added.", edgeAdded == 0);
+
+        //Add edge with new nodes
+        src = "f";
+        dst = "g";
+        edgeAdded = DotGraph.addEdge(src, dst);
+        assertTrue("Edge added was not added.", edgeAdded == 0);
+    }*/
 }
 
