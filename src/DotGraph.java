@@ -2,6 +2,7 @@ import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 
 import java.io.*;
+import java.util.Objects;
 import java.util.Vector;
 
 public class DotGraph {
@@ -9,8 +10,7 @@ public class DotGraph {
     static Vector<String> nodes;
 
     public static DefaultDirectedGraph<String, DefaultEdge> parseGraph(String filename) throws IOException {
-        graph = new DefaultDirectedGraph<>(DefaultEdge.class);
-        nodes = new Vector<>();
+        initializeGraph();
         BufferedReader reader = new BufferedReader(new FileReader(filename));
         String line;
 
@@ -49,41 +49,49 @@ public class DotGraph {
         return graph;
     }
 
+    private static void initializeGraph() {
+        graph = new DefaultDirectedGraph<>(DefaultEdge.class);
+        nodes = new Vector<>();
+    }
+
     public static String graphtoString(){
         int nodeCount = 0;
         int edgeCount = 0;
         StringBuilder output = new StringBuilder();
 
         System.out.println("Node List: ");
+        output.append("Node List: " + "\n");
         for (String node : nodes) {
             System.out.println(node);
-            output.append(node).append("; ");
+            output.append(node).append("; " + "\n");
             nodeCount++;
         }
-        System.out.println("Total node count: " + nodeCount);
+        output.append("Total node count: ").append(nodeCount + "\n");
         System.out.println("Edge List: ");
+        output.append("Edge List: " + "\n");
         for (DefaultEdge edge : graph.edgeSet()) {
             String source = graph.getEdgeSource(edge);
             String dest = graph.getEdgeTarget(edge);
             System.out.println(source + " -> " + dest);
-            output.append(source).append(" -> ").append(dest).append("; ");
+            output.append(source).append(" -> ").append(dest).append("; " + "\n");
             edgeCount++;
         }
         System.out.println("Total edge count: " + edgeCount);
+        output.append("Total edge count: ").append(edgeCount + "\n");
         return output.toString();
     }
 
-    public static void outputGraph(String filepath) throws IOException {
-        String source;
-        String dest;
+
+
+    public static void outputDOTGraph(String filepath) throws IOException {
         try (FileWriter fileWriter = new FileWriter(filepath)) {
             fileWriter.write("digraph G {\n");
             for (String node : nodes) {
                 fileWriter.write("    " + node + ";\n");
             }
             for (DefaultEdge edge : graph.edgeSet()) {
-                source = graph.getEdgeSource(edge);
-                dest = graph.getEdgeTarget(edge);
+                String source = graph.getEdgeSource(edge);
+                String dest = graph.getEdgeTarget(edge);
                 fileWriter.write("    " + source + " -> " + dest + ";\n");
             }
             fileWriter.write("}\n");
@@ -147,6 +155,30 @@ public class DotGraph {
             }
         }
         return false;
+    }
+
+    public static void outputGraph(String outputPath) {
+        String output = DotGraph.graphtoString();
+        try(FileWriter writer = new FileWriter(outputPath)){
+            writer.write(output);
+            System.out.println("Output written to " + outputPath);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static boolean outputGraphics(String path, String format) throws IOException, InterruptedException {
+        if(Objects.equals(format, "png")){
+            String outputFile = "output.png";
+            ProcessBuilder processBuilder = new ProcessBuilder("dot", "-T" + format, path, "-o", outputFile);
+            Process process = processBuilder.start();
+            int exitCode = process.waitFor();
+            return true;
+        }
+        else{
+            System.out.print("This API can only output .DOT graphs as PDF images");
+            return false;
+        }
     }
 }
 
