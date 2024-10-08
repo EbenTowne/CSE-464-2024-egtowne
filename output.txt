@@ -1,0 +1,16 @@
+Node List: 
+a; 
+b; 
+c; 
+d; 
+e; 
+Total node count: 5
+Edge List: 
+a -> b; 
+a -> c; 
+b -> d; 
+c -> d; 
+c -> e; 
+e -> a; 
+a -> d; 
+Total edge count: 7

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c7816cf-784b-4cd6-8943-defd3394c223" name="Changes" comment="Making more thorough test cases and methods" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="ebentowne &lt;ebengtv@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EbenTowne&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EbenTowne/CSE-464-2024-egtowne.git&quot;,
+    &quot;accountId&quot;: &quot;bae6a271-de40-4681-8c9e-f5d934184277&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2mUGqx5SakaBsxZr06tyrTOTfLw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.DotGraphTest.parseTest.executor": "Run",
+    "JUnit.GraphTest.addEdgeTest.executor": "Coverage",
+    "JUnit.GraphTest.addNodeTest.executor": "Run",
+    "JUnit.GraphTest.executor": "Run",
+    "JUnit.GraphTest.graphToStringTest.executor": "Run",
+    "JUnit.GraphTest.outputDOTGraph.executor": "Run",
+    "JUnit.GraphTest.outputDOTTest.executor": "Run",
+    "JUnit.GraphTest.outputGraph.executor": "Run",
+    "JUnit.GraphTest.outputImageTest.executor": "Run",
+    "JUnit.GraphTest.outputTest.executor": "Run",
+    "JUnit.GraphTest.parseTest.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/ebentowne/IdeaProjects/CSE464Project1/test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/home/ebentowne/IdeaProjects/CSE464Project1/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/out/production/CSE464Project1/Resource" />
+      <recent name="$PROJECT_DIR$/src/Resource" />
+      <recent name="$PROJECT_DIR$/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.GraphTest">
+    <configuration name="GraphTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSE464Project1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GraphTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphTest.graphToStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSE464Project1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GraphTest" />
+      <option name="METHOD_NAME" value="graphToStringTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphTest.outputDOTGraph" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSE464Project1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GraphTest" />
+      <option name="METHOD_NAME" value="outputDOTGraph" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphTest.outputGraph" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSE464Project1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GraphTest" />
+      <option name="METHOD_NAME" value="outputGraph" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphTest.outputImageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSE464Project1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GraphTest" />
+      <option name="METHOD_NAME" value="outputImageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GraphTest" />
+        <item itemvalue="JUnit.GraphTest.graphToStringTest" />
+        <item itemvalue="JUnit.GraphTest.outputImageTest" />
+        <item itemvalue="JUnit.GraphTest.outputDOTGraph" />
+        <item itemvalue="JUnit.GraphTest.outputGraph" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c7816cf-784b-4cd6-8943-defd3394c223" name="Changes" comment="" />
+      <created>1727123939883</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727123939883</updated>
+      <workItem from="1727123941816" duration="728000" />
+      <workItem from="1727125271968" duration="2972000" />
+      <workItem from="1727128655708" duration="6186000" />
+      <workItem from="1727135244308" duration="657000" />
+      <workItem from="1727294587219" duration="2453000" />
+      <workItem from="1727719731522" duration="464000" />
+      <workItem from="1727720457803" duration="564000" />
+      <workItem from="1727721062231" duration="4892000" />
+      <workItem from="1727726989498" duration="294000" />
+      <workItem from="1727823511340" duration="446000" />
+      <workItem from="1727824540395" duration="842000" />
+      <workItem from="1727825514796" duration="813000" />
+      <workItem from="1727891080412" duration="1747000" />
+      <workItem from="1728320248980" duration="5126000" />
+      <workItem from="1728325912638" duration="3475000" />
+      <workItem from="1728331153548" duration="1661000" />
+      <workItem from="1728402215313" duration="168000" />
+    </task>
+    <task id="LOCAL-00001" summary="Feature 1 Iteration 1">
+      <option name="closed" value="true" />
+      <created>1727722141643</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727722141643</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Feature 1 Iteration 1">
+      <option name="closed" value="true" />
+      <created>1727722432303</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727722432305</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Feature 1 Iteration 1">
+      <option name="closed" value="true" />
+      <created>1727723069270</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727723069270</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Feature 1 Iteration 2 (completed)">
+      <option name="closed" value="true" />
+      <created>1727726509598</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727726509598</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Feature 1 Iteration 2 (completed)">
+      <option name="closed" value="true" />
+      <created>1727726632140</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727726632140</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Feature 2 Iteration 1 (completed)">
+      <option name="closed" value="true" />
+      <created>1727892567942</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727892567942</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Feature 3 Iteration 1 (completed)">
+      <option name="closed" value="true" />
+      <created>1727892730293</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727892730295</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Feature 4 (completed), also made changed filepaths from absolute to relative">
+      <option name="closed" value="true" />
+      <created>1728332006396</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728332006397</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Making more thorough test cases and methods">
+      <option name="closed" value="true" />
+      <created>1728402334489</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728402334489</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Feature 1 Iteration 1" />
+    <MESSAGE value="Feature 1 Iteration 2 (completed)" />
+    <MESSAGE value="Feature 2 Iteration 1 (completed)" />
+    <MESSAGE value="Feature 3 Iteration 1 (completed)" />
+    <MESSAGE value="Feature 4 (completed), also made changed filepaths from absolute to relative" />
+    <MESSAGE value="Making more thorough test cases and methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Making more thorough test cases and methods" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CSE464Project1$GraphTest_parseTest.ic" NAME="GraphTest.parseTest Coverage Results" MODIFIED="1727299102126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CSE464Project1$GraphTest.ic" NAME="GraphTest Coverage Results" MODIFIED="1728330330671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>
